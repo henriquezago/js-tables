@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tables</title>
 
   <link rel="stylesheet" href="/styles.css" />
@@ -15,23 +16,23 @@
     <header class="table-header">
       <h2>Pages</h2>
       <div>
-        <button onclick="javascript:previousPage()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="previousPage()"><i class="fa-solid fa-chevron-left"></i></button>
         <span id="currentPageLabel"></span>
-        <button onclick="javascript:nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+        <button onclick="nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </header>
 
     <table>
       <thead>
         <tr>
-          <th id="url" onclick="javascript:sortTable('url')">URL <i></i></th>
-          <th id="avgScrollPercentage" onclick="javascript:sortTable('avgScrollPercentage')">Scroll <i></i></th>
-          <th id="totalCount" onclick="javascript:sortTable('totalCount')">Total count <i></i></th>
-          <th id="bounceCount" onclick="javascript:sortTable('bounceCount')">Bounce <i></i></th>
-          <th id="startsWithContent" onclick="javascript:sortTable('startsWithCount')">Enters <i></i></th>
-          <th id="endWithCount" onclick="javascript:sortTable('endsWithCount')">Exits <i></i></th>
-          <th id="totalPageviewCount" onclick="javascript:sortTable('totalPageviewCount')">Pageviews <i></i></th>
-          <th id="totalVisitorCount" onclick="javascript:sortTable('totalVisitorCount')">Visitors <i></i></th>
+          <th id="url" onclick="sortTable('url')">URL <i></i></th>
+          <th id="avgScrollPercentage" onclick="sortTable('avgScrollPercentage')">Scroll <i></i></th>
+          <th id="totalCount" onclick="sortTable('totalCount')">Total count <i></i></th>
+          <th id="bounceCount" onclick="sortTable('bounceCount')">Bounce <i></i></th>
+          <th id="startsWithCount" onclick="sortTable('startsWithCount')">Enters <i></i></th>
+          <th id="endsWithCount" onclick="sortTable('endsWithCount')">Exits <i></i></th>
+          <th id="totalPageviewCount" onclick="sortTable('totalPageviewCount')">Pageviews <i></i></th>
+          <th id="totalVisitorCount" onclick="sortTable('totalVisitorCount')">Visitors <i></i></th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
@@ -43,7 +44,7 @@
     <div id="reactTable"></div>
   </div>
 
-  <script type="text/javascript" src="/script.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>

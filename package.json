@@ -1,15 +1,23 @@
 {
-  "name": "hockeystack",
+  "name": "tables",
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "type": "module",
   "scripts": {
-    "start": "http-server --proxy http://localhost:8080?",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Henrique Zago",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.3",
+    "@vitejs/plugin-react": "^4.0.3"
   }
 }

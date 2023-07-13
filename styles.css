@@ -20,6 +20,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  color: var(--color6);
+  cursor: default;
+}
+
 .react-table-wrapper,
 .js-table-wrapper {
   width: 100%;
@@ -46,13 +51,13 @@ table {
 table tr th,
 table tr td {
   padding: 0.7813rem 1.5625rem;
+  overflow: hidden;
 }
 
 table thead th {
   position: sticky;
   top: 0;
   z-index: 1;
-  /* width: 25vw; */
   padding-top: 8.25px;
   padding-bottom: 8.25px;
   background: var(--color-black);

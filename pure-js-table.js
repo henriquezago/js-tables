@@ -1,5 +1,4 @@
-const ITEMS_PER_PAGE = 10;
-
+// @ts-nocheck
 let currentPage = 1;
 let pageSize = 10;
 let orderBy = 'url';
@@ -108,8 +107,8 @@ function nextPage() {
 }
 
 function renderPage(page) {
-  const start = (page - 1) * ITEMS_PER_PAGE;
-  const end = page * ITEMS_PER_PAGE;
+  const start = (page - 1) * pageSize;
+  const end = page * pageSize;
   const rows = data.slice(start, end);
   renderTable(rows);
 }
@@ -118,6 +117,10 @@ function numPages() {
   return Math.ceil(data.length / pageSize);
 }
 
-(function () {
+export function init() {
+  window.previousPage = previousPage;
+  window.nextPage = nextPage;
+  window.sortTable = sortTable;
+
   initTable();
-})();
+}
