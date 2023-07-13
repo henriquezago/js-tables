@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>Tables</title>
+
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- ICONS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="js-table-wrapper">
+    <h1>Pure JS Table</h1>
+
+    <header class="table-header">
+      <h2>Pages</h2>
+      <div>
+        <button onclick="javascript:previousPage()"><i class="fa-solid fa-chevron-left"></i></button>
+        <span id="currentPageLabel"></span>
+        <button onclick="javascript:nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th id="url" onclick="javascript:sortTable('url')">URL <i></i></th>
+          <th id="avgScrollPercentage" onclick="javascript:sortTable('avgScrollPercentage')">Scroll <i></i></th>
+          <th id="totalCount" onclick="javascript:sortTable('totalCount')">Total count <i></i></th>
+          <th id="bounceCount" onclick="javascript:sortTable('bounceCount')">Bounce <i></i></th>
+          <th id="startsWithContent" onclick="javascript:sortTable('startsWithCount')">Enters <i></i></th>
+          <th id="endWithCount" onclick="javascript:sortTable('endsWithCount')">Exits <i></i></th>
+          <th id="totalPageviewCount" onclick="javascript:sortTable('totalPageviewCount')">Pageviews <i></i></th>
+          <th id="totalVisitorCount" onclick="javascript:sortTable('totalVisitorCount')">Visitors <i></i></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="react-table-wrapper">
+    <h1>React Table</h1>
+    <div id="reactTable"></div>
+  </div>
+
+  <script type="text/javascript" src="/script.js"></script>
+</body>
+
+</html>

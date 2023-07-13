@@ -1,0 +1,115 @@
+:root {
+  --color-black: rgb(25 25 25);
+  --color6: rgb(32 32 35);
+  --color-light-gray: #1e2124;
+  --color-black-russian: #1e1e21;
+  --color-gray: #9498a7e0;
+  --color-white: #f0f0f4;
+
+  --border-radius: 0.3906rem;
+}
+
+body {
+  font-family: inter, sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-gray);
+  cursor: pointer;
+}
+
+.react-table-wrapper,
+.js-table-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+table {
+  white-space: nowrap;
+  margin: 0;
+  border: none;
+  border-collapse: separate;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-spacing: 0;
+  border: 1px solid var(--color-black-russian);
+  border-top: none;
+  table-layout: fixed;
+  width: 100%;
+  overflow-x: scroll;
+  font-size: 0.875rem;
+}
+
+table tr th,
+table tr td {
+  padding: 0.7813rem 1.5625rem;
+}
+
+table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* width: 25vw; */
+  padding-top: 8.25px;
+  padding-bottom: 8.25px;
+  background: var(--color-black);
+  color: var(--color-gray);
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+
+table tbody tr:hover td {
+  background-color: var(--color-black-russian);
+}
+
+table td {
+  background: var(--color6);
+  color: var(--color-white);
+  padding: 0.25rem 0.3125rem;
+  text-align: center;
+}
+
+table tbody tr td {
+  border-bottom: 1px solid var(--color-black-russian);
+}
+
+table tbody th {
+  font-weight: 100;
+  font-style: italic;
+  text-align: left;
+  position: relative;
+}
+
+table tbody tr td:first-child,
+table thead th:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  width: 400px;
+}
+
+table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--color6);
+  color: var(--color-white);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.table-header h1 {
+  font-size: 1.25rem;
+}
