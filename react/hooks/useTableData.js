@@ -27,7 +27,7 @@ export function useTableData(data) {
     }
   }, [orderBy, order, setOrderBy, setOrder]);
 
-  function sortByColumn(rows) {
+  const sortByColumn = useCallback((rows) => {
     return rows.sort((a, b) => {
       if (order === 'asc') {
         return a[orderBy] > b[orderBy] ? 1 : -1;
@@ -35,7 +35,7 @@ export function useTableData(data) {
         return a[orderBy] < b[orderBy] ? 1 : -1;
       }
     });
-  }
+  }, [order, orderBy]);
 
   const goToNextPage = useCallback(() => {
     setCurrentPage((currentPage) => currentPage + 1);

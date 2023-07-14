@@ -11,10 +11,14 @@ export function Table({ data }) {
   return (
     <>
       <Header currentPage={currentPage} goToNextPage={goToNextPage} goToPreviousPage={goToPreviousPage} />
-      <table>
-        <TableHeader sortTable={sortTable} order={order} orderBy={orderBy} />
-        <TableBody data={rows} />
-      </table>
+      <div className="table-outer-wrapper">
+        <div className="table-inner-wrapper">
+          <table>
+            <TableHeader sortTable={sortTable} order={order} orderBy={orderBy} />
+            <TableBody data={rows} />
+          </table>
+        </div>
+      </div>
     </>
   );
 }

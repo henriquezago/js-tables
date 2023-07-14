@@ -22,21 +22,25 @@
       </div>
     </header>
 
-    <table>
-      <thead>
-        <tr>
-          <th id="url" onclick="sortTable('url')">URL <i></i></th>
-          <th id="avgScrollPercentage" onclick="sortTable('avgScrollPercentage')">Scroll <i></i></th>
-          <th id="totalCount" onclick="sortTable('totalCount')">Total count <i></i></th>
-          <th id="bounceCount" onclick="sortTable('bounceCount')">Bounce <i></i></th>
-          <th id="startsWithCount" onclick="sortTable('startsWithCount')">Enters <i></i></th>
-          <th id="endsWithCount" onclick="sortTable('endsWithCount')">Exits <i></i></th>
-          <th id="totalPageviewCount" onclick="sortTable('totalPageviewCount')">Pageviews <i></i></th>
-          <th id="totalVisitorCount" onclick="sortTable('totalVisitorCount')">Visitors <i></i></th>
-        </tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
+    <div class="table-outer-wrapper">
+      <div class="table-inner-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th id="url" onclick="sortTable('url')">URL <i></i></th>
+              <th id="avgScrollPercentage" onclick="sortTable('avgScrollPercentage')">Scroll <i></i></th>
+              <th id="totalCount" onclick="sortTable('totalCount')">Total count <i></i></th>
+              <th id="bounceCount" onclick="sortTable('bounceCount')">Bounce <i></i></th>
+              <th id="startsWithCount" onclick="sortTable('startsWithCount')">Enters <i></i></th>
+              <th id="endsWithCount" onclick="sortTable('endsWithCount')">Exits <i></i></th>
+              <th id="totalPageviewCount" onclick="sortTable('totalPageviewCount')">Pageviews <i></i></th>
+              <th id="totalVisitorCount" onclick="sortTable('totalVisitorCount')">Visitors <i></i></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <div class="react-table-wrapper">

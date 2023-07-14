@@ -44,11 +44,10 @@ function renderTable(rows) {
   }
 
   tableBody.innerHTML = '';
-  const sortedRows = sortByColumn(rows);
-  sortedRows.forEach(row => {
+  rows.forEach(row => {
     const tableRow = document.createElement('tr');
     tableRow.innerHTML = `
-      <td>${row.url}</td>
+      <th>${row.url}</th>
       <td>${row.avgScrollPercentage}%</td>
       <td>${row.totalCount}</td>
       <td>${row.bounceCount}</td>
@@ -109,7 +108,8 @@ function nextPage() {
 function renderPage(page) {
   const start = (page - 1) * pageSize;
   const end = page * pageSize;
-  const rows = data.slice(start, end);
+  const sortedData = sortByColumn(data);
+  const rows = sortedData.slice(start, end);
   renderTable(rows);
 }
 

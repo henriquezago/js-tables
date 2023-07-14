@@ -15,8 +15,6 @@ npm run dev
 
 Things I'd like to improve:
 
-- Pure JS table is not sorting properly. It only sorts the current page. React table is sorting the whole dataset.
-- There are a few CSS adjustments to be made with more time, like the sorting icon getting hidden and the text overflow in the first column.
 - Table is not ready to receive a different dataset. It's hardcoded to receive the same dataset as the React table.
 
 Trade-off:

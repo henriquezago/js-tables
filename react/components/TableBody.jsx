@@ -1,9 +1,11 @@
+// @ts-nocheck
+
 export function TableBody({ data }) {
   return (
     <tbody>
       {data.map((row) => (
         <tr key={row.url}>
-          <td>{row.url}</td>
+          <th>{row.url}</th>
           <td>{row.avgScrollPercentage}%</td>
           <td>{row.totalCount}</td>
           <td>{row.bounceCount}</td>
